@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简介</title>
+    <style>
+
+      /* 淡入效果和hover动画 */
+      #con {
+        animation: fadeIn 0.5s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* 卡片hover效果 */
+      .info-card {
+        transition: transform 0.3s ease, box-shadow 0.3ms ease;
+      }
+
+      .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      /* 头像hover效果 */
+      .avatar-container img {
+        transition: transform 0.3s ease;
+        border-radius: 10px;
+      }
+
+      .avatar-container img:hover {
+        transform: scale(1.05);
+      }
+
+      /* 信息项hover效果 */
+      .info-item {
+        transition: all 0.3s ease;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+
+      .info-item:hover {
+        background-color: rgba(255, 165, 0, 0.1);
+        transform: translateX(5px);
+      }
+
+      /* 介绍文本hover效果 */
+      .intro {
+        transition: color 0.3s ease;
+      }
+
+      .intro:hover {
+        color: orangered;
+      }
+
+      /* 媒体查询代码应该插入到现有CSS样式表的末尾 */
+      @media screen and (max-width: 768px) {
+        #con {
+          padding: 15px;
+          margin: 10px;
+        }
+        
+        .info-card {
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .avatar-container {
+          margin-bottom: 15px;
+        }
+        
+        .info-container {
+          text-align: center;
+        }
+        
+        .info-item {
+          font-size: 14px;
+          margin: 8px 0;
+        }
+        
+        h1 {
+          font-size: 24px;
+        }
+        
+        .intro {
+          font-size: 14px;
+          padding: 0 10px;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        body {
+          padding: 10px;
+        }
+        
+        #con {
+          padding: 10px;
+        }
+        
+        .info-item {
+          font-size: 13px;
+        }
+      }
+
+      h1 {
+        text-align: center;
+        color: orangered;
+      }
+
+       body {
+        background: url(../img/2.png);
+        background-size: cover;
+        margin: 0;
+        padding: 20px;
+        font-family: "微软雅黑";
+      }
+
+      /* 主容器使用 flex 布局 */
+      #con {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* 个人信息卡片使用 flex 布局 */
+      .info-card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      /* 头像容器 */
+      .avatar-container {
+        flex: 1;
+        min-width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* 信息容器 */
+      .info-container {
+        flex: 2;
+        min-width: 200px;
+      }
+
+      .info-item {
+        margin: 10px 0;
+        white-space: pre;
+      }
+
+      .intro {
+        width: 100%;
+        text-align: center;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>个人简介</h1>
+    <div id="con">
+      <div class="info-card">
+        <div class="avatar-container">
+          <img src="../img/1.png" alt="头像" height="110px" width="90px">
+        </div>
+        <div class="info-container">
+          <p class="info-item">姓名: 杨龙康</p>
+          <p class="info-item">性别: 男     年龄: 21</p>
+          <p class="info-item">电话: 1111     邮箱: 2222</p>
+        </div>
+      </div>
+      <br>
+      <p class="intro">大家好,我叫xxx,毕业于xx院校,我希望接下来的日子,我能和大家好好相处!</p>
+    </div>
+  </body>
+</html>
